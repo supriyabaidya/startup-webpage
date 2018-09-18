@@ -1,20 +1,59 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<app-header></app-header>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!--<app-recipes></app-recipes>-->
+      <!--<app-shopping-list></app-shopping-list>-->
+      <!--<app-recipes *ngIf="featureType==='recipes'"></app-recipes>-->
+      <!--<app-shopping-list *ngIf="featureType==='shopping_list'"></app-shopping-list>-->
+
+      <router-outlet></router-outlet>
+
+      <div>
+        AngularJS<br/>
+
+        From Wikipedia, the free encyclopedia<br/>
+
+        AngularJS (also written as Angular.js) is a JavaScript-based open-source front-end web application framework
+        mainly maintained by Google and by a community of individuals and corporations to address many of the challenges
+        encountered in developing single-page applications. The JavaScript components complement Apache Cordova, a
+        framework used for developing cross-platform mobile apps. It aims to simplify both the development and the
+        testing of such applications by providing a framework for client-side model–view–controller (MVC) and
+        model–view–viewmodel (MVVM) architectures, along with components commonly used in rich Internet applications.
+        (This flexibility has led to the acronym MVW, which stands for "model-view-whatever" and may also encompass
+        model–view–presenter and model–view–adapter.) In 2014, the original AngularJS team began working on the Angular
+        application platform.
+
+        The AngularJS framework works by first reading the HTML page, which has additional custom tag attributes
+        embedded into it. Angular interprets those attributes as directives to bind input or output parts of the page to
+        a model that is represented by standard JavaScript variables. The values of those JavaScript variables can be
+        manually set within the code, or retrieved from static or dynamic JSON resources.
+
+        According to JavaScript analytics service Libscore, AngularJS is used on the websites of Wolfram Alpha, NBC,
+        Walgreens, Intel, Sprint, ABC News, and about 12,000 other sites out of 1 million tested in October 2016.[3]
+        AngularJS is currently in the top 100 of the most starred projects on GitHub.[4]
+
+        AngularJS is the frontend part of the MEAN stack, consisting of MongoDB database, Express.js web application
+        server framework, Angular.js itself, and Node.js server runtime environment.
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-footer">
+    <app-footer></app-footer>
+  </div>
+</div>
+
+<!--fixed at bottom-->
+<!--<footer class="navbar-default navbar-fixed-bottom">-->
+<!--<div class="container-fluid">-->
+<!--<app-footer></app-footer>-->
+<!--</div>-->
+<!--</footer>-->
