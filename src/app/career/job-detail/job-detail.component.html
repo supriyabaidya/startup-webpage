@@ -1,0 +1,37 @@
+<div class="row">
+  <h2 class="mx-auto">Job Details</h2>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h4 style="font-weight: bold">{{job.title}}</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h4>Description:</h4>
+    <p>{{job.description}}</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h4>Requirements:</h4>
+    <ul>
+      <li *ngFor="let requirement of job.requirements">{{requirement}}</li>
+    </ul>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h4>{{job.experience}} years experience is needed</h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <h4 style="font-weight: bold">Salary package is INR {{job.salary}} per annum </h4>
+  </div>
+</div>
