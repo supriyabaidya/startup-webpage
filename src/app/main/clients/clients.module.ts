@@ -20,5 +20,5 @@ const clientRoutes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class ClientModule {
+export class ClientsModule {
 }

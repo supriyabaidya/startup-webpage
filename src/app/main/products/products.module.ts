@@ -20,5 +20,5 @@ const productsRoutes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class ContactModule {
+export class ProductsModule {
 }
