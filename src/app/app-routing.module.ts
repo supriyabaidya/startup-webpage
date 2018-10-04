@@ -1,34 +1,23 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-import {AdminComponent} from './admin/admin.component';
-import {JobPostComponent} from './admin/job-post/job-post.component';
-import {HomeComponent} from './home/home.component';
-import {ProductsComponent} from './products/products.component';
-import {ServicesComponent} from './services/services.component';
-import {ClientsComponent} from './clients/clients.component';
-import {CareerComponent} from './career/career.component';
-import {JobDetailComponent} from './career/job-detail/job-detail.component';
-import {AboutComponent} from './about/about.component';
-import {ContactComponent} from './contact/contact.component';
-import {ErrorPageComponent} from './error-page/error-page.component';
-import {LoginComponent} from './login/login.component';
+import {HomeComponent} from './core/home/home.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'admin', component: AdminComponent},
-  {path: 'job-post', component: JobPostComponent},
+  {path: 'admin', loadChildren: './main/admin/admin.module#AdminModule'},
+  // {path: 'job-post', loadChildren: './main/main.module#MainModule'},
   {path: 'home', component: HomeComponent},
-  {path: 'products', component: ProductsComponent},
-  {path: 'services', component: ServicesComponent},
-  {path: 'clients', component: ClientsComponent},
-  {path: 'career', component: CareerComponent},
-  {path: 'career/job-detail/:id', component: JobDetailComponent},
-  {path: 'about', component: AboutComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'not-found', component: ErrorPageComponent, data: {errorMessage: 'page not found!!'}},
-  // {path: '**', redirectTo: '/not-found'}
+  {path: 'products', loadChildren: './main/products/products.module#ProductsModule'},
+  {path: 'services', loadChildren: './main/services/services.module#ServicesModule'},
+  {path: 'clients', loadChildren: './main/clients/clients.module#ClientsModule'},
+  {path: 'career', loadChildren: './main/career/career.module#CareerModule'},
+  // {path: 'career/job-detail/:id', loadChildren: './main/main.module#MainModule'},
+  {path: 'about', loadChildren: './main/about/about.module#AboutModule'},
+  {path: 'contact', loadChildren: './main/contact/contact.module#ContactModule'},
+  {path: 'login', loadChildren: './auth/auth.module#AuthModule'},
+  {path: 'not-found', loadChildren: './main/error-page/error-page.module#ErrorPageModule', data: {errorMessage: 'page not found!!'}},
+  {path: '**', redirectTo: '/not-found'}
 ];
 
 @NgModule({
